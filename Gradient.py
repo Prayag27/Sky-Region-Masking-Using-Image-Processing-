@@ -74,22 +74,22 @@ cv2.destroyAllWindows()
 final = threshold
 flag = 0
 
-for i in range(final.shape[1]):
-    for j in range(final.shape[0]):       
-        # if final[j,i] == 0 or flag == True:
-        #     flag = False
-        if final[j,i] == 0:
-            final[j,i] = 255
-        else:
-            final[j,i] = 0
+# for i in range(final.shape[1]):
+#     for j in range(final.shape[0]):       
+#         # if final[j,i] == 0 or flag == True:
+#         #     flag = False
+#         if final[j,i] == 0:
+#             final[j,i] = 255
+#         else:
+#             final[j,i] = 0
    
 
 for i in range(final.shape[1]):
     for j in range(final.shape[0]):       
         if final[j,i] == 255 and flag == 0:
              flag = 1
-             print("yo")
-        print(flag)
+#              print("check")
+#         print(flag)
         if flag == 1:
             final[j,i] = 255
         elif flag == 0:
